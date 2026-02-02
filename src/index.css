@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "MyLogo";
+  src:
+    local("MyLogo"),
+    url(./assets/logo.woff) format("woff");
+}
