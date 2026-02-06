@@ -1,9 +1,22 @@
-import React from "react";
+import ListItem from "./list_Item";
+import ItemGroup from "./group_items";
 
-function ContentMain() {
+function ContentMain(props) {
+  console.log("ContentMain props:", props);
   return (
-    <section id="main-content" class="min-h-96 flex">
-      <div class="border w-svw m-5 p-5"> keine Eintrage</div>
+    <section id="main-content" className="min-h-96 flex">
+      <div className="border w-svw m-5 p-5">
+        {props.diaryData.length == 0
+          ? "keine Eintr&auml;ge"
+          : props.diaryData.map((groupentry, index) => (
+              <ItemGroup
+                key={index}
+                group={groupentry}
+                groupIndex={index}
+                diaryInstance={props.diaryInstance}
+              />
+            ))}
+      </div>
     </section>
   );
 }
