@@ -1,8 +1,15 @@
 @import "tailwindcss";
+@plugin "daisyui";
 
 @font-face {
   font-family: "MyLogo";
   src:
     local("MyLogo"),
     url(./assets/logo.woff) format("woff");
+}
+@font-face {
+  font-family: "MyDatum";
+  src:
+    local("MyDatum"),
+    url(./assets/datum.woff) format("woff");
 }
